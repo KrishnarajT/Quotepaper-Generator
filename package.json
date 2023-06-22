@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "name": "quote-generator",
+  "version": "1.0.0",
+  "description": "generate random quotes and wikiquotes",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishnarajT/quote-generator.git"
+  },
+  "keywords": [
+    "quotes"
+  ],
+  "author": "KrishnarajT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishnarajT/quote-generator/issues"
+  },
+  "homepage": "https://github.com/KrishnarajT/quote-generator#readme"
+}
