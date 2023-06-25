@@ -2,21 +2,27 @@ import React, { useContext, useEffect, useState } from "react";
 import { quoteContext } from "../contexts/quoteContext";
 import { Button } from "flowbite-react";
 import LoadingSpinner from "./Spinner.js";
+import { imageContext } from "../contexts/ImageContext";
 
-const Quote = () => {
-	const [isLoading, setIsLoading] = useState(false);
-
+const Quote = (props) => {
+    const [isLoading, setIsLoading] = useState(false);
+    const { quotes, fetchQuote } = useContext(quoteContext);
+    const { quote, sayer, tag } = quotes;
+    const { image, fetchImages } = useContext(imageContext);
+    
 	const handleFetchQuote = () => {
 		setIsLoading(true);
-		fetchQuote(setIsLoading);
+        fetchQuote(setIsLoading);
 	};
 
-	const { quotes, fetchQuote } = useContext(quoteContext);
-	const { quote, sayer } = quotes;
-
 	useEffect(() => {
-		fetchQuote(setIsLoading);
-	}, []);
+        handleFetchQuote();
+    }, []);
+    
+    useEffect(() => {
+        console.log(tag);
+        fetchImages(setIsLoading, [tag]);
+    }, [tag]);
 	return (
 		<div>
 			{isLoading ? (
@@ -25,7 +31,7 @@ const Quote = () => {
 				<div>
 					<h1 className="text-2xl font-bold">Quote</h1>
 					<p className="text-xl">{quote}</p>
-					<p className="text-xl">- {sayer}</p>
+					<p className="text-xl">{sayer}</p>
 				</div>
 			)}
 			<br />
@@ -35,7 +41,7 @@ const Quote = () => {
 				className=""
 			>
 				Fetch Quote
-			</Button>
+            </Button>
 		</div>
 	);
 };

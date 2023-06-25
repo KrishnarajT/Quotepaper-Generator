@@ -1169,14 +1169,6 @@ input:checked + .toggle-bg {
   top: 50%;
 }
 
-.top-11 {
-  top: 2.75rem;
-}
-
-.left-36 {
-  left: 9rem;
-}
-
 .-z-10 {
   z-index: -10;
 }

@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import QuoteContextProvider from "./contexts/quoteContext";
 import Quote from "./components/Quote";
-
+import ImageContextProvider from "./contexts/ImageContext";
+import ContainerDiv from "./components/ContainerDiv";
 function App() {
 	return (
 		<div className="App">
 			<QuoteContextProvider>
-				<Quote />
+				<ImageContextProvider>
+					<ContainerDiv />
+					<Quote />
+				</ImageContextProvider>
 			</QuoteContextProvider>
 		</div>
 	);

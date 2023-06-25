@@ -15,9 +15,9 @@ const QuoteContextProvider = (props) => {
         const data = await response.json();
         setQuotes({
             quote: data.content,
-            sayer: data.author
+            sayer: data.author,
+            tag: data.tags
         });
-        setIsLoading(false);
     };
 
 	return (
