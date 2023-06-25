@@ -15,24 +15,55 @@ body {
     background-color: #efdfdf;
     background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23590202' fill-opacity='0.19'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     font: 'Rubik', sans-serif;
+    overflow: hidden;
 }
 
-.rubik{
+.rubik {
     font-family: 'Rubik', sans-serif;
 }
 
-.roboto-slab{
+.roboto-slab {
     font-family: 'Roboto Slab', serif;
 }
 
-.source-sans{
+.source-sans {
     font-family: 'Source Sans 3', sans-serif;
 }
 
-.wellfleet{
+.wellfleet {
     font-family: 'Wellfleet', cursive;
 }
 
-.titillium{
+.titillium {
     font-family: 'Titillium Web', sans-serif;
+}
+
+.special-elite {
+    font-family: 'Special Elite', sans-serif;
+}
+
+blockquote::before {
+    content: '“';
+    left: -5rem;
+    top: -2rem;
+}
+
+blockquote::after {
+    content: '”';
+    right: -5rem;
+    bottom: 1rem;
+}
+
+.rocher {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+blockquote {
+    /* dark shadow */
+    text-shadow: 0 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+    text-shadow: 0 0 0 2rem rgba(0, 0, 0, 0.5);
 }

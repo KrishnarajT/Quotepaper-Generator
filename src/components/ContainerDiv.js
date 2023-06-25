@@ -15,7 +15,9 @@ const ContainerDiv = () => {
 				position: "fixed",
 				top: "0",
 				left: "0",
-				zIndex: "-1",
+                zIndex: "-1",
+                filter: "brightness(0.9)",
+                backgroundBlendMode: "multiply"
 			}}
 		></div>
 	);
